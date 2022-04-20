@@ -10,6 +10,6 @@ export default function Appointment(props){
   }
 
   return(
-    <article className="appointment">{showAppointmentTime}</article>
+    <article className="appointment" time={time}>{showAppointmentTime(time)}</article>
   );
 };
