@@ -4,15 +4,13 @@ import InterviewerList from 'components/InterviewerList';
 
 export default function Form(props) {
   const { 
-    student,
-    interviewer,
     interviewers,
     onSave,
     onCancel    
   } = props;
 
-  // const [student, setStudent] = useState('');
-  // const [interviewer, setInterviewer] = useState(0);
+  const [student, setStudent] = useState(props.student ||"");
+  const [interviewer, setInterviewer] = useState(props.interviewer || null);
 
   return (
     <main className="appointment__card appointment__card--create">
@@ -22,15 +20,15 @@ export default function Form(props) {
             className="appointment__create-input text--semi-bold"
             name="name"
             type="text"
+            value={student}
+            onChange={(e) => setStudent(e.target.value)}
             placeholder="Enter Student Name"
-            value={"Lisa" || student}
-            // onChange={() => setStudent(value)}
           />
         </form>
         <InterviewerList
           interviewers={interviewers}
           value={interviewer}
-          // onChange={setInterviewer}
+          onChange={setInterviewer}
         />
       </section>
       <section className="appointment__card-right">

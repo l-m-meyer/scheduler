@@ -190,8 +190,8 @@ storiesOf("Appointment", module)
   .add("Error", () => <Error onClose={action('onClose')}/>)
   .add("Edit", () => (
     <Form
-      student='{student}'
-      interviewer={interviewer}
+      student='Lisa'
+      interviewer={1}
       interviewers={interviewers}
       onSave={action('onSave')}
       onCancel={action('onCancel')} 
