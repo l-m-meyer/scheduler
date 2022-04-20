@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
-import "components/Application.scss";
 import DayList from "components/DayList"
+import "components/Application.scss";
 
 const days = [
   {
