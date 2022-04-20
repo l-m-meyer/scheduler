@@ -11,7 +11,7 @@ function InterviewerListItem(props){
   );
 
   return(
-    <li onClick={() => setInterviewer(id)} className={interviewerClass}>
+    <li onClick={setInterviewer} className={interviewerClass}>
       <img 
         className="interviewers__item-image"
         src={avatar}
