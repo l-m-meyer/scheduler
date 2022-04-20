@@ -10,6 +10,9 @@ import DayListItem from "components/DayListItem";
 import DayList from "components/DayList";
 import InterviewerListItem from "components/InterviewerListItem";
 
+/**********************
+ *  Story for Button  *
+ *********************/
 
 storiesOf("Button", module)
   .addParameters({
@@ -27,6 +30,10 @@ storiesOf("Button", module)
     </Button>
   ));
 
+/***************************
+ *  Story for DayListItem  *
+ **************************/
+
 storiesOf("DayListItem", module) //Initiates Storybook and registers our DayListItem component
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
@@ -37,6 +44,10 @@ storiesOf("DayListItem", module) //Initiates Storybook and registers our DayList
   .add("Clickable", () => (
     <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
 ));
+
+/***********************
+ *  Story for DayList  *
+ **********************/
 
 const days = [
   {
@@ -71,9 +82,9 @@ storiesOf("DayList", module)
   ));
 
 
-/***************************
- *  Story for Interviewer  *
- **************************/
+/***********************************
+ *  Story for InterviewerListItem  *
+ **********************************/
 const interviewer = {
   id: 1,
   name: "Sylvia Palmer",
