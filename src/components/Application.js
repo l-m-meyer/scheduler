@@ -43,27 +43,16 @@ const appointments = {
   }
 };
 
-const days = [
-  {
-    id: 1,
-    name: "Monday",
-    spots: 2,
-  },
-  {
-    id: 2,
-    name: "Tuesday",
-    spots: 5,
-  },
-  {
-    id: 3,
-    name: "Wednesday",
-    spots: 0,
-  },
-];
-
-
 export default function Application(props) {
-  const [day, setDay] = useState('Monday');
+  const [days, setDays] = useState([]);
+
+  useEffect(() => {
+    axios.get('/api/days')
+      .then((res) => {
+        console.log(res)
+        setDays([...res.data])
+      })
+  }, [])
 
   return (
     <main className="layout">
@@ -77,8 +66,8 @@ export default function Application(props) {
         <nav className="sidebar__menu">
           <DayList
             days={days}
-            value={day}
-            onChange={setDay}
+            value={days.name}
+            onChange={setDays}
           />
         </nav>
         <img
