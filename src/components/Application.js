@@ -50,7 +50,7 @@ export default function Application(props) {
     axios.get('/api/days')
       .then((res) => {
         console.log(res)
-        setDays([...res.data])
+        setDays([...days, ...res.data])
       })
   }, [])
 
