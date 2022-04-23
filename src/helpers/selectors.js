@@ -16,3 +16,8 @@ export const getInterview = (state, interview)  => {
     interviewer: state.interviewers[interview.interviewer]
   };
 }
+
+
+export const getInterviewersForDay = () => {
+
+}
