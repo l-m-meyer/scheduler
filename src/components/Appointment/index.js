@@ -4,6 +4,7 @@ import Show from "components/Appointment/Show";
 import Empty from "components/Appointment/Empty";
 import Form from "components/Appointment/Form";
 import useVisualMode from 'hooks/useVisualMode';
+// import { getInterviewersForDay } from 'helpers/selectors';
 import "components/Appointment/styles.scss";
 
 export default function Appointment(props) {
@@ -15,6 +16,7 @@ export default function Appointment(props) {
   const { mode, transition, back } = useVisualMode(
     interview ? SHOW : EMPTY
   );
+
 
 
   return (
@@ -29,7 +31,7 @@ export default function Appointment(props) {
       {mode === SHOW && (
         <Show
           student={props.interview.student}
-          interviewer={props.interview.interviewer}
+          interview={props.interview.interviewer}
         />
       )}
     </article>
