@@ -10,7 +10,7 @@ export default function Appointment(props){
   return(
     <article className="appointment">
       <Header time={time} />
-      {interview ? <Show /> : <Empty />}
+      {interview ? <Show {...interview} /> : <Empty />}
     </article>
   );
 };
