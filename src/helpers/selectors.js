@@ -7,7 +7,6 @@ export const getAppointmentsForDay = (state, day) => {
   return dayAppointments.appointments.map(id => state.appointments[id]);
 }
 
-
 export const getInterview = (state, interview)  => {
   if (!interview) return null;
 
@@ -17,27 +16,18 @@ export const getInterview = (state, interview)  => {
   };
 }
 
-
 export const getInterviewersForDay = (state, selectedDayName) => {
-  // console.log('state:',state);
-  // console.log('selectedDayName', selectedDayName);
+
   const selectedDay = state.days.find(day => day.name === selectedDayName);
-  // console.log('selectedDay', selectedDay);
   if (!selectedDay) return [];
 
   const interviewerIds = selectedDay.interviewers;
   const interviewers = state.interviewers;
   const interviewersArr = Object.values(interviewers);
-  // console.log('interviewers', interviewers);
-  console.log('interviewersArr: ', interviewersArr);
-  console.log('interviewerIds:',interviewerIds)
 
   const selectedDayInterviewers = interviewerIds.map((id) =>  {
-    interviewersArr.find((interviewer) => interviewer.id === id)
+    return interviewersArr.find((interviewer) => interviewer.id === id)
   });
-  console.log('selectedDayInterviewers: ', selectedDayInterviewers);
 
-  return selectedDayInterviewers;
-
-  
+  return selectedDayInterviewers;  
 }
