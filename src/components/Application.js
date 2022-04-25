@@ -14,9 +14,8 @@ export default function Application(props) {
     interviewers: {}
   });
 
-  // TODO: will allow change to the local state when we book an interview
   function bookInterview(id, interview) {
-    console.log('bookInterview:', id, interview);
+
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
@@ -27,7 +26,11 @@ export default function Application(props) {
       [id]: appointment
     };
 
-    setState({...state, appointments});
+    return axios.put(`/api/appointments/${id}`, {interview})
+      .then(() => {
+        setState({...state, appointments});
+      })
+      .catch(err => console.log(err)); 
   }
 
   const setDay = day => setState({ ...state, day });
