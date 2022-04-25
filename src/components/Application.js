@@ -14,6 +14,22 @@ export default function Application(props) {
     interviewers: {}
   });
 
+  // TODO: will allow change to the local state when we book an interview
+  function bookInterview(id, interview) {
+    console.log('bookInterview:', id, interview);
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+    };
+
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+
+    setState({...state, appointments});
+  }
+
   const setDay = day => setState({ ...state, day });
   const setDays = days => setState(prev => ({ ...prev, days }));
   
@@ -29,10 +45,10 @@ export default function Application(props) {
         time={appointment.time}
         interview={interview}
         interviewers={interviewers}
+        bookInterview={bookInterview}
       />
     )
   })
-
 
   useEffect(() => {
     Promise.all([
@@ -43,7 +59,6 @@ export default function Application(props) {
       const days = all[0].data
       const appointments = all[1].data
       const interviewers = all[2].data
-      console.log('interviewers', interviewers);
       setState(prev => ({...prev, days, appointments, interviewers}))
     })
   }, [])
