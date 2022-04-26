@@ -65,7 +65,7 @@ export default function Appointment(props) {
         />
       }
       {mode === SAVING && <Status message={SAVING} />}
-      {mode === ERROR_SAVE && <Error message='Could not save appointment' onClose={back} />}
+      {mode === ERROR_SAVE && <Error message='Could not save appointment' onClose={() => back()} />}
       {mode === SHOW && (
         <Show
           student={interview.student}
