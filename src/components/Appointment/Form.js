@@ -9,7 +9,7 @@ export default function Form(props) {
     onCancel    
   } = props;
   
-  const [student, setStudent] = useState(props.student ||"");
+  const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
 
   const reset = () => {
@@ -33,6 +33,7 @@ export default function Form(props) {
             value={student}
             onChange={(e) => setStudent(e.target.value)}
             placeholder="Enter Student Name"
+            data-testid="student-name-input"
           />
         </form>
         <InterviewerList
