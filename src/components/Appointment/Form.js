@@ -28,13 +28,12 @@ export default function Form(props) {
       setError("Student name cannot be blank");
       return;
     }
-    // TODO: double check if this validation check is still necessary, fails tests
-    // if (interviewer === null) {
-    //   setError("Please select an interviewer");
-    //   return;
-    // }
+    if (interviewer === null) {
+      setError("Please select an interviewer");
+      return;
+    }
     setError("");
-    props.onSave(student, interviewer);
+    onSave(student, interviewer);
   }
 
   return (
