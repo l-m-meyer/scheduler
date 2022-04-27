@@ -29,8 +29,9 @@ export default function useApplicationData(props){
       return {
         ...day,
         spots: day.appointments
-          .filter((id) => newState.appointments[id].interview === null)
-          .length
+                .reduce((acc, id) => {
+                  return acc + (newState.appointments[id].interview === null)
+                }, 0)
       }
     })
   }
