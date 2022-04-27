@@ -1,6 +1,6 @@
 
 export const getAppointmentsForDay = (state, day) => {
-  const dayAppointments = state.days.find(item => item.name === day);
+  const dayAppointments = state.days.find(appointment => appointment.name === day);
   
   if (!dayAppointments) return [];
 
