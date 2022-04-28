@@ -6,7 +6,7 @@ Scheduler was built with React, JavaScript, Webpack, and NodeJS and tested with 
 ## Purpose
 **_BEWARE_: This app was created for learning purposes. It is not intended for use in production-grade software.**
 
-This project was created and published by Lisa Meyeras part of my learnings at Lighthouse Labs.
+This project was created and published by Lisa Meyer as part of my learnings at Lighthouse Labs.
 
 ## Scheduler in Action
 Scheduler has a pleasing user interface that easily displays the day and number of available appointments.
