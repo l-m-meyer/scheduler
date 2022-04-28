@@ -9,6 +9,18 @@ import Error from './Error';
 import useVisualMode from 'hooks/useVisualMode';
 import "components/Appointment/styles.scss";
 
+/**
+ * Create Appointment component.
+ * Displays the appropriate visual mode to the user as they interact with the page.
+ * @param {Number} props.id Appointment id
+ * @param {String} props.time Appointment start time
+ * @param {Object} props.interview
+ * @param {Array} props.interviewers 
+ * @param {Function} props.bookInterview
+ * @param {Function} props.cancelInterview
+ * @returns JSX Appointment component
+ */
+
 export default function Appointment(props) {
   const EMPTY = 'EMPTY';
   const SHOW = 'SHOW';

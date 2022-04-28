@@ -1,4 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+/**
+ * Create Status component.
+ * Displays a status message to user to indicate the action of SAVING or DELETING
+ * @param {String} props.message status message of SAVING or DELETING
+ * @returns JSX Status component
+ */
 
 export default function Status(props){
   const { message } = props;

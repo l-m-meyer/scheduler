@@ -1,4 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+/**
+ * Manages the history state of components.
+ * @param {Array} initial 
+ * @returns An object with the mode history, transition function, and back function.
+ */
 
 export default function useVisualMode(initial) {
   const [history, setHistory] = useState([initial]);

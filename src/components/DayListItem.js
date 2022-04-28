@@ -2,6 +2,16 @@ import React from 'react';
 import classNames from 'classnames';
 import 'components/DayListItem.scss'
 
+/**
+ * Create DayListItem component.
+ * Renders the individual list items that make up DayList.
+ * @param {String} props.name Day name
+ * @param {Number} props.spots Number of available appointments
+ * @param {Boolean} props.selected Changes the background color when true
+ * @param {Function} props.setDay
+ * @returns JSX DayListItem component
+ */
+
 export default function DayListItem(props){
   const { name, spots, selected, setDay } = props;
 

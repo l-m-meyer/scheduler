@@ -1,6 +1,15 @@
 import React from 'react';
 import Button from 'components/Button';
 
+/**
+ * Create Confirm component. 
+ * Allows the user to confirm or cancel an action.
+ * @param {String} props.message
+ * @param {Function} props.onConfirm
+ * @param {Function} props.onCancel
+ * @returns JSX Confirm component
+ */
+
 export default function Confirm(props){
   const { message, onConfirm, onCancel } = props;
   

@@ -128,7 +128,7 @@ storiesOf("InterviewerListItem", module)
     />
   ));
 
-/*****************************
+/*******************************
  *  Story for InterviewerList  *
  ******************************/
 

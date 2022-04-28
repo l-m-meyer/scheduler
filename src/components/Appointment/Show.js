@@ -1,5 +1,15 @@
 import React from 'react';
 
+/**
+ * Create Show component.
+ * Displays confirmed appointments to the user.
+ * @param {String} props.student student name
+ * @param {String} props.interviewer interviewer name
+ * @param {Function} props.onEdit
+ * @param {Function} props.onDelete
+ * @returns JSX Show component
+ */
+
 export default function Show(props){
   const { student, interviewer, onEdit, onDelete } = props;
   

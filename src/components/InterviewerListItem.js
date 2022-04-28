@@ -2,6 +2,16 @@ import React from 'react';
 import classNames from 'classnames';
 import "components/InterviewerListItem.scss";
 
+/**
+ * Create InterviewerListItem component.
+ * Displays a photo and the name of the selected interviewer.
+ * @param {String} props.name Interviewer name
+ * @param {String} props.avatar Interviewer photo
+ * @param {Boolean} props.selected
+ * @param {Function} props.setInterviewer
+ * @returns JSX InterviewerList component
+ */
+
 function InterviewerListItem(props){
   const { name, avatar, selected, setInterviewer } = props;
 

@@ -2,6 +2,17 @@ import React, { useState } from 'react';
 import Button from 'components/Button';
 import InterviewerList from 'components/InterviewerList';
 
+/**
+ * Create Form component.
+ * Displays a form to create a new appointment or edit an existing appointment.
+ * @param {Array} props.interviewers 
+ * @param {Function} props.onSave 
+ * @param {Function} props.onCancel 
+ * @param {String} props.student student name
+ * @param {Number} props.interviewer interviewer id
+ * @returns JSX Form component
+ */
+
 export default function Form(props) {
   const { 
     interviewers,

@@ -1,5 +1,13 @@
 import React from 'react'
 
+/**
+ * Create Error component.
+ * Displays an error to the user when attempting to save or delete appointment.
+ * @param {String} props.message 
+ * @param {Function} props.onClose 
+ * @returns JSX Error component
+ */
+
 export default function Error(props){
   const { message, onClose } = props;
 

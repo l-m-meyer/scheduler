@@ -1,8 +1,16 @@
 import React from 'react';
 import InterviewerListItem from './InterviewerListItem';
 import 'components/InterviewerList.scss';
-
 import PropTypes from 'prop-types';
+
+/**
+ * Create InterviewerList component.
+ * Displays the list of available interviewers on a given day.
+ * @param {Array} props.interviewers List of interviewers
+ * @param {Number} props.value Interviewer id
+ * @param {Function} props.onChange
+ * @returns JSX InterviewerList component
+ */
 
 export default function InterviewerList(props){
   const {

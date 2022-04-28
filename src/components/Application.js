@@ -5,6 +5,10 @@ import "components/Application.scss";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from 'helpers/selectors';
 import useApplicationData from 'hooks/useApplicationData';
 
+/**
+ * Create root Application component.
+ * @returns JSX render of Application
+ */
 
 export default function Application() {
   const {

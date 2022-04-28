@@ -1,3 +1,7 @@
+/**
+ * Test Appointment component using Jest.
+ */
+
 import React from "react";
 
 import { render } from "@testing-library/react";
