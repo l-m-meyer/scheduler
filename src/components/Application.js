@@ -32,8 +32,8 @@ export default function Application() {
         bookInterview={bookInterview}
         cancelInterview={cancelInterview}
       />
-    )
-  })
+    );
+  });
 
   return (
     <main className="layout">
@@ -62,5 +62,5 @@ export default function Application() {
         <Appointment key="last" time="5pm" />
       </section>
     </main>
-  )
+  );
 }

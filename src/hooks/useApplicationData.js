@@ -27,7 +27,7 @@ export default function useApplicationData(){
       const interviewers = all[2].data
       setState(prev => ({...prev, days, appointments, interviewers}))
     })
-  }, [])
+  }, []);
 
   function getSpots(newState) {
     return newState.days.map(day => {
@@ -38,7 +38,7 @@ export default function useApplicationData(){
                   return acc + (newState.appointments[id].interview === null)
                 }, 0)
       }
-    })
+    });
   }
 
   function cancelInterview(id) {
@@ -67,9 +67,8 @@ export default function useApplicationData(){
           days: spots,
           appointments 
         })
-
-      })
-      
+      }
+    );     
   }
 
   function bookInterview(id, interview) {
@@ -87,7 +86,7 @@ export default function useApplicationData(){
     const newState = {
       ...state,
       appointments
-    }
+    };
 
     const spots = getSpots(newState);
 
@@ -98,8 +97,7 @@ export default function useApplicationData(){
           days: spots,
           appointments
         });
-      })
-      
+      });
   }
 
   return {
@@ -107,5 +105,5 @@ export default function useApplicationData(){
     setDay,
     bookInterview,
     cancelInterview
-  }
-};
+  };
+}

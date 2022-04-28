@@ -46,7 +46,7 @@ export const getInterviewersForDay = (state, selectedDayName) => {
   const interviewersArr = Object.values(interviewers);
 
   const selectedDayInterviewers = interviewerIds.map((id) =>  {
-    return interviewersArr.find((interviewer) => interviewer.id === id)
+    return interviewersArr.find((interviewer) => interviewer.id === id);
   });
 
   return selectedDayInterviewers;  
